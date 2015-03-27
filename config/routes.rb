@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  resources :topics
   resources :topics do
       member do
           post 'upvote'
+          post 'downvote'
+          post 'downvoteAll'
       end
   end
   resources :drinks
